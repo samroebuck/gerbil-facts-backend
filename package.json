@@ -1,0 +1,38 @@
+{
+  "name": "gerbil-facts-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "node --inspect=5858 -r ts-node/register ./src/server.ts",
+    "dev": "nodemon",
+    "build": "tsc",
+    "script": "cd src/scripts && ts-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samroebuck/gerbil-facts-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samroebuck/gerbil-facts-backend/issues"
+  },
+  "homepage": "https://github.com/samroebuck/gerbil-facts-backend#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^4.0.7",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.6.2",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  }
+}
