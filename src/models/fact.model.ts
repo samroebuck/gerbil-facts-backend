@@ -1,16 +1,11 @@
 import { model, Schema } from 'mongoose';
-
-interface Fact {
-    fact: string;
-    author: string;
-    dateAdded: Date;
-}
+import { IFact } from '../interfaces/fact.interface'
 
 const FactSchema: Schema = new Schema({
     fact: { type: String, required: true },
     author: { type: String, required: true },
-    dateAdded: { type: Date, required: true }
+    dateAdded: { type: Date, default: Date.now() }
 });
 
 
-export const Fact = model<Fact>('fact', FactSchema);
+export const Fact = model<IFact>('fact', FactSchema);

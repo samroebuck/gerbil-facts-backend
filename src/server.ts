@@ -2,9 +2,8 @@ import * as dotenv from "dotenv";
 import express from "express";
 
 import { connect } from "./database/database";
-
 import { factsRouter } from './routes/facts.routes'
-import { randomRouter } from './routes/random.routes'
+
 
 dotenv.config();
 
@@ -28,7 +27,6 @@ app.use(express.json());
 
 app.use('/', factsRouter);
 
-app.use('/random', randomRouter)
 /**
  * Server Activation
  */
